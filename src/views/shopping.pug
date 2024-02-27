@@ -1,0 +1,12 @@
+extend shoppingBase.pug
+include mixins/foodGrid.pug
+
+block main
+    a(href="shopping/muffine") 
+        button Muffine!
+    a(href="shopping/cake") 
+        button Cake!
+
+    each food in foods
+        +foodInfo(food)
+    

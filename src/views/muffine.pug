@@ -1,0 +1,9 @@
+extend shoppingBase.pug
+include mixins/foodGrid.pug
+
+block main
+    a(href="/shopping") 
+            button back
+    each food in foods
+        if food.category === "muffine"
+            +foodInfo(food)
